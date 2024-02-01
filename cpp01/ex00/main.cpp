@@ -11,13 +11,15 @@
 /* ************************************************************************** */
 
 # include "./Zombie.hpp"
-void fn()
+
+int main(void) 
 {
-    Zombie zz("firas");
-    zz.announce();
-}
-int main(void)
-{
-    fn();
-    return (0);
+	Zombie	*z1;
+
+	z1 = newZombie("flafi");
+	z1->announce();
+	randomChump("42hn");
+
+	delete z1;
+	return 0;
 }

@@ -12,18 +12,34 @@
 
 # include "./Zombie.hpp"
 
-Zombie::Zombie(std::string name)
+// default constructor
+Zombie::Zombie(void)
+{
+    this->set_name("unkownZombie");
+}
+// added to access the private explicitly
+void Zombie::set_name(std::string name)
 {
     this->name = name;
 }
-
+// getter for name
+std::string Zombie::get_name(void)
+{
+    return (this->name);
+}
+// constructor with the name
+Zombie::Zombie(std::string name)
+{
+    this->set_name(name);
+}
+// destructor
 Zombie::~Zombie(void)
 {
-    std::cout << "<" << this->name << "> " << "Urgghhh... *lifeless groan*\n" ;
+    std::cout << "<" << this->get_name() << "> " << "Urgghhh... *lifeless groan*\n" ;
 }
 
 void Zombie::announce(void)
 {
-    std::cout << "<" << this->name << "> " << "BraiiiiiiinnnzzzZ...\n" ;
+    std::cout << "<" << this->get_name() << "> " << "BraiiiiiiinnnzzzZ...\n" ;
 }
 
