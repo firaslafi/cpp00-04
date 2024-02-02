@@ -6,7 +6,7 @@
 #    By: flafi <flafi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/31 02:27:31 by flafi             #+#    #+#              #
-#    Updated: 2024/01/31 02:27:31 by flafi            ###   ########.fr        #
+#    Updated: 2024/02/02 22:06:10 by flafi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ WHITE = \033[0;97m
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = ./Account.cpp
+SRCS = ./Account.cpp ./tests.cpp
+#./tests.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = account
 

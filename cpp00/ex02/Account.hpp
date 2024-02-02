@@ -7,6 +7,9 @@
 //                                                                            //
 // ************************************************************************** //
 
+# include <iostream>
+# include <ctime>
+# include <iomanip>
 
 #pragma once
 #ifndef __ACCOUNT_H__
