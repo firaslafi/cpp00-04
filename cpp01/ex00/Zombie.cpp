@@ -35,11 +35,11 @@ Zombie::Zombie(std::string name)
 // destructor
 Zombie::~Zombie(void)
 {
-    std::cout << "<" << this->get_name() << "> " << "Urgghhh... *lifeless groan*\n" ;
+    std::cout << this->get_name() << ": " << "Urgghhh... *lifeless groan*\n" ;
 }
 
 void Zombie::announce(void)
 {
-    std::cout << "<" << this->get_name() << "> " << "BraiiiiiiinnnzzzZ...\n" ;
+    std::cout << this->get_name() << ": " << "BraiiiiiiinnnzzzZ...\n" ;
 }
 
