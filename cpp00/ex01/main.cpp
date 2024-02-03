@@ -6,34 +6,11 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/27 03:05:47 by flafi             #+#    #+#             */
-/*   Updated: 2024/01/27 03:05:47 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/03 20:46:03 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-
-
-class Contact
-{
-    public:
-    int index;
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string number;
-    std::string darkest_secret;
-
-
-};
-
-class PhoneBook
-{
-    public:
-    Contact contacts[3];
-    int index;
-    int total;
-};
+# include "./Contact.hpp"
 
 int check_choice(std::string str)
 {

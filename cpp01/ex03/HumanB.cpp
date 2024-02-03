@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 04:24:26 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/03 04:24:26 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/03 20:51:09 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 HumanB::HumanB(std::string name)
 {
     this->_name = name;
-    (*_weapon).setType("no weapon");
+    this->_weapon = new Weapon("no weapon");
+    // (_weapon).setType("no weapon");
     return ;
 };
 
