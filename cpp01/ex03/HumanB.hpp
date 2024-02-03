@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/02 04:50:16 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/02 04:50:16 by flafi            ###   ########.fr       */
+/*   Created: 2024/02/03 04:25:05 by flafi             #+#    #+#             */
+/*   Updated: 2024/02/03 04:25:05 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 # include <iostream>
+# include "./Weapon.hpp"
 
-class Weapon
+class HumanB
 {
     public:
 
-    Weapon(void);
-    Weapon(std::string type);
-    ~Weapon(void);
+    HumanB(std::string name);
+    // HumanB(std::string name, Weapon& weapon);
+    ~HumanB(void);
 
-    const std::string& getType(void);
-    void setType(std::string newType);
+    void attack(void);
+    void setWeapon(Weapon& weapon);
 
     private:
-    std::string _type;
+    Weapon* _weapon;
+    std::string _name;
+
 };
+
 #endif
