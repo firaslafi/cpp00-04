@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 21:02:10 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/03 22:38:40 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/06 20:31:55 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void Sed::replace(std::string input, std::string output, std::string s1, std::st
         }
         else
         {
-            cout << "Couldn't read the file" << std::endl;
+            cout << "Couldn't read the file or empty" << std::endl;
         }
     }
     else 

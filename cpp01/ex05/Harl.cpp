@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 22:40:26 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/04 21:56:45 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/06 20:34:01 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ using std::string;
 
 Harl::Harl(void)
 {
-    
+    return ;
 }
 Harl::~Harl(void)
 {
-    
+    return ;
 }
 void Harl::complain(string level)
 {

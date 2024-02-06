@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 22:08:42 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/04 22:15:45 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/06 20:42:46 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ using std::string;
 
 Harl::Harl(void)
 {
-    
+    return ;
 }
 Harl::~Harl(void)
 {
-    
+    return ;
 }
 void Harl::complain(string level)
 {
@@ -30,14 +30,14 @@ void Harl::complain(string level)
     int i = 0;
     int foundLevel = 0;
     while(i < 4)
+    {
+        if (levels[i].compare(level) == 0)
         {
-            if (levels[i].compare(level) == 0)
-            {
-                foundLevel = 1;
-                break;
-            }
-            i++;
+            foundLevel = 0;
+            break;
         }
+        i++;
+    }
     switch(i)
     {
         case 0:
