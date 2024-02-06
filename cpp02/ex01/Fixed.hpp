@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 22:31:54 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/05 23:45:06 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/06 19:18:58 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ class Fixed
     int _fpValue;
     static const int _fractionalBits = 8;
 };
-
+// overloading the << operator for COUT so it can print something
 std::ostream &operator<<( std::ostream &outpudstream, Fixed const &num);
 #endif
