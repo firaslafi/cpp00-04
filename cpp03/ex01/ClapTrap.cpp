@@ -6,18 +6,17 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 21:38:53 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/09 10:28:51 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/09 12:40:15 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "./ClapTrap.hpp"
 
-using std::cout;
 
 // default constructor
-ClapTrap::ClapTrap(void)
+ClapTrap::ClapTrap(void): _name("defaultName"), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-    cout << "Default constructor is called." << std::endl;
+    cout << "Default ClapTrap constructor is called." << std::endl;
 }
 // ClapTrap::ClapTrap(void)
 // {
@@ -28,9 +27,9 @@ ClapTrap::~ClapTrap(void)
     cout << "Destructor is called " << this->_name << " vanished!" << std::endl;
 }
 // main constructor
-ClapTrap::ClapTrap(string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDammage(0)
+ClapTrap::ClapTrap(string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-    cout << "Main constructor is called " << this->_name << " got created" << std::endl;
+    cout << "Main ClapTrap constructor is called " << this->_name << " got created." << std::endl;
 }
 
 // copy constructor
@@ -39,7 +38,7 @@ ClapTrap::ClapTrap(const ClapTrap &source)
     _name = source._name;
     _hitPoints = source._hitPoints;
     _energyPoints = source._energyPoints;
-    _attackDammage = source._attackDammage;
+    _attackDamage = source._attackDamage;
 }
 // copy assignment operator
 ClapTrap& ClapTrap::operator=(const ClapTrap &source)
@@ -49,7 +48,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &source)
         this->_name = source._name;
         this->_hitPoints = source._hitPoints;
         this->_energyPoints = source._energyPoints;
-        this->_attackDammage = source._attackDammage;
+        this->_attackDamage = source._attackDamage;
     }
     return (*this);
 }
@@ -59,7 +58,7 @@ void ClapTrap::attack(const std::string &target)
     if (this->_energyPoints > 0 && this->_hitPoints > 0)
     {
         cout << "ClapTrap " << this->_name << " attacks " 
-            << target << " causing " << this->_attackDammage 
+            << target << " causing " << this->_attackDamage 
             << " points of damage!" << std::endl;
         this->_energyPoints--;
         cout << this->_energyPoints << " energy points left." << std::endl;
