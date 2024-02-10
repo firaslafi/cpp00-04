@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 21:39:01 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/09 12:43:35 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/10 08:12:13 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int main(void)
 {
-    // ClapTrap a("alpha");
-    // a.attack("halima");
+    ClapTrap a("alpha");
+    a.attack("halima");
     // a.beRepaired(1);
     // a.beRepaired(1);
     // a.beRepaired(1);
@@ -30,7 +30,8 @@ int main(void)
     // a.takeDamage(50);
     // a.attack("halima");
     
-    ScavTrap one("one");
-    ScavTrap b = one;
-
+    ScavTrap one("MESSI");
+    // ScavTrap b = one;
+    one.attack("Ronaldo");
+    one.beRepaired(10);
 }

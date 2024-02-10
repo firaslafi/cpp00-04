@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 21:38:53 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/09 12:40:15 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/10 08:13:56 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(void): _name("defaultName"), _hitPoints(10), _energyPoints(10
 // }
 ClapTrap::~ClapTrap(void)
 {
-    cout << "Destructor is called " << this->_name << " vanished!" << std::endl;
+    cout << "ClapTrap Destructor is called " << this->_name << " has been vanished!" << std::endl;
 }
 // main constructor
 ClapTrap::ClapTrap(string name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
