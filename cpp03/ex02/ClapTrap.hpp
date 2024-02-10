@@ -1,36 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 10:31:20 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/10 12:19:59 by flafi            ###   ########.fr       */
+/*   Created: 2024/02/07 21:38:59 by flafi             #+#    #+#             */
+/*   Updated: 2024/02/10 08:16:50 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
 # include <string>
 
-# include "./ClapTrap.hpp"
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#define RED     "\033[31m"      /* Red */
+#define RESET   "\033[0m"
+#define BLUE    "\033[34m"      /* Blue */
 
-class ScavTrap:public ClapTrap
+using std::string;
+using std::cout;
+
+class ClapTrap
 {
     public:
-    ScavTrap(void);
-    ScavTrap(string name);
-    ~ScavTrap(void) ;
-    
+
+    ClapTrap(void);
+    ClapTrap(string name);
     // copy constructor
-    ScavTrap(const ScavTrap &source);
+    ClapTrap(const ClapTrap &source);
     // copy assignment operator
-    ScavTrap& operator=(const ScavTrap &source);
+    ClapTrap& operator=(const ClapTrap &source);
+    ~ClapTrap(void);
     
-    void guardGate(void);
     void attack(const std::string &target);
+    void takeDamage(unsigned int amount);
+    void beRepaired(unsigned int amount);
+    
+    protected:
+    string _name;
+    int _hitPoints;
+    int _energyPoints;
+    int _attackDamage;
 };
+
 #endif

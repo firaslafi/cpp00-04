@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/09 10:31:23 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/10 12:16:00 by flafi            ###   ########.fr       */
+/*   Created: 2024/02/10 11:19:34 by flafi             #+#    #+#             */
+/*   Updated: 2024/02/10 12:13:35 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./ScavTrap.hpp"
+# include "./FragTrap.hpp"
 
-ScavTrap::ScavTrap(void):ClapTrap()
+FragTrap::FragTrap(void):ClapTrap()
+{
+    this->_hitPoints = 100;
+    this->_energyPoints = 100;
+    this->_attackDamage = 30;
+    cout << "Default FragTrap constructor is called." << std::endl;
+}
+FragTrap::FragTrap(string name):ClapTrap(name)
 {
     this->_hitPoints = 100;
     this->_energyPoints = 50;
     this->_attackDamage = 20;
-    cout << "Default ScavTrap constructor is called." << std::endl;
+    cout << "Main FragTrap constructor is called " << this->_name << " got created." << std::endl;
 }
-ScavTrap::ScavTrap(string name):ClapTrap(name)
+FragTrap::~FragTrap(void) 
 {
-    this->_hitPoints = 100;
-    this->_energyPoints = 50;
-    this->_attackDamage = 20;
-    cout << "Main ScavTrap constructor is called " << this->_name << " got created." << std::endl;
-}
-ScavTrap::~ScavTrap(void) 
-{
-    std::cout << "ScavTrap destructor called for " << this->_name << "." << std::endl;
+    std::cout << "FragTrap destructor called for " << this->_name << "." << std::endl;
 }
 // copy constructor
-ScavTrap::ScavTrap(const ScavTrap &source)
+FragTrap::FragTrap(const FragTrap &source)
 {
     _name = source._name;
     _hitPoints = source._hitPoints;
@@ -39,7 +39,7 @@ ScavTrap::ScavTrap(const ScavTrap &source)
     _attackDamage = source._attackDamage;
 }
 // copy assignment operator
-ScavTrap& ScavTrap::operator=(const ScavTrap &source)
+FragTrap& FragTrap::operator=(const FragTrap &source)
 {
     if (this != &source)
     {
@@ -50,11 +50,11 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &source)
     }
     return (*this);
 }
-void ScavTrap::attack(const std::string &target)
+void FragTrap::attack(const std::string &target)
 {
     if (this->_energyPoints > 0 && this->_hitPoints > 0)
     {
-        cout << "ScavTrap " << this->_name << " attacks " 
+        cout << "FragTrap " << this->_name << " attacks " 
             << target << " causing " << RED << this->_attackDamage << RESET
             << " points of damage!" << std::endl;
         this->_energyPoints--;
@@ -62,18 +62,18 @@ void ScavTrap::attack(const std::string &target)
     }
     else if (this->_hitPoints <= 0)
     {
-        cout << "ScavTrap " << " is dead and can't be attacked!!!" << std::endl;
+        cout << "FragTrap " << " is dead and can't be attacked!!!" << std::endl;
     }
     else
     {
-        cout << "ScavTrap " << BLUE << this->_name << RESET << "is out of energy points, needs to rest"
+        cout << "FragTrap " << BLUE << this->_name << RESET << "is out of energy points, needs to rest"
             << std::endl;
     }
 }
-void ScavTrap::guardGate(void)
+void FragTrap::highFivesGuys(void)
 {
     if (this->_hitPoints > 0)
-        cout << RED <<this->_name <<" is now guarding the holly gate!!!" << RESET << std::endl;
+        cout << RED << this->_name << " is now sending high five to everyone!" << RESET << std::endl;
     else
-    cout << RED << this->_name << " can't do the action becauese he's unalive :(" << RESET << std::endl;
+        cout << RED << this->_name << " can't do the action becauese he's unalive :(" << RESET << std::endl;
 }

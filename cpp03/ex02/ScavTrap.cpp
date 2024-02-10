@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 10:31:23 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/10 12:16:00 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/10 12:15:54 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ ScavTrap::~ScavTrap(void)
 {
     std::cout << "ScavTrap destructor called for " << this->_name << "." << std::endl;
 }
+
 // copy constructor
 ScavTrap::ScavTrap(const ScavTrap &source)
 {

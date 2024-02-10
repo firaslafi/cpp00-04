@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 10:31:20 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/10 12:19:59 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/10 12:15:05 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class ScavTrap:public ClapTrap
     ScavTrap(void);
     ScavTrap(string name);
     ~ScavTrap(void) ;
-    
     // copy constructor
     ScavTrap(const ScavTrap &source);
     // copy assignment operator
