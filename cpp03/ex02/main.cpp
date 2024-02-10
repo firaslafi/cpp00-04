@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 21:39:01 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/10 12:16:44 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/10 12:28:44 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ int main(void)
     // one.beRepaired(10);
     // one.guardGate();
     FragTrap frag("a really loyal frag");
-    frag.attack("the evil guy");
+    // frag.attack("the evil guy");
     frag.highFivesGuys();
-    FragTrap frag2 = frag;
-    frag2.highFivesGuys();
+    // FragTrap frag2 = frag;
+    // frag2.highFivesGuys();
     
 }
