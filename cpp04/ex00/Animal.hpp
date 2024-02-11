@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/07 21:38:59 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/11 12:31:24 by flafi            ###   ########.fr       */
+/*   Created: 2024/02/11 12:29:16 by flafi             #+#    #+#             */
+/*   Updated: 2024/02/11 13:43:43 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
 # include <string>
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 using std::string;
+using std::cout;
 
-class ClapTrap
+class Animal
 {
     public:
-
-    ClapTrap(void);
-    ClapTrap(string name);
-    // copy constructor
-    ClapTrap(const ClapTrap &source);
-    // copy assignment operator
-    ClapTrap& operator=(const ClapTrap &source);
-    ~ClapTrap(void);
     
-    void attack(const std::string &target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+    Animal(void);
     
-    private:
-    string _name;
-    int _hitPoints;
-    int _energyPoints;
-    int _attackDammage;
+    void makeSound(void);
+    protected:
+    string type;
 };
-
 #endif
