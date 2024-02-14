@@ -6,7 +6,7 @@
 #    By: flafi <flafi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/11 12:27:53 by flafi             #+#    #+#              #
-#    Updated: 2024/02/13 11:27:23 by flafi            ###   ########.fr        #
+#    Updated: 2024/02/14 10:48:31 by flafi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ WHITE = \033[0;97m
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = ./main.cpp ./Animal.cpp ./Dog.cpp ./Cat.cpp
+SRCS = ./main.cpp ./Animal.cpp ./Dog.cpp ./Cat.cpp ./WrongAnimal.cpp ./WrongCat.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = program
 

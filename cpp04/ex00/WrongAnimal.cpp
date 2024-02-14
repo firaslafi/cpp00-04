@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongWrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 12:29:25 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/14 10:27:29 by flafi            ###   ########.fr       */
+/*   Created: 2024/02/14 10:38:41 by flafi             #+#    #+#             */
+/*   Updated: 2024/02/14 10:41:05 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "./Animal.hpp"
+# include "./WrongAnimal.hpp"
 
-Animal::Animal(void): type("AnimalDefaultType")
+WrongAnimal::WrongAnimal(void): type("WrongAnimalDefaultType")
 {
-    cout << GREEN << "Animal: Default Animal constructor has been called!" << RESET << endl;
+    cout << GREEN << "WrongAnimal: Default WrongAnimal constructor has been called!" << RESET << endl;
 }
-Animal::~Animal(void)
+WrongAnimal::~WrongAnimal(void)
 {
-    cout << GREEN << "Animal: Destructor called." << RESET << endl;
+    cout << GREEN << "WrongAnimal: Destructor called." << RESET << endl;
 }
 // copy constructor
-Animal::Animal(const Animal &source)
+WrongAnimal::WrongAnimal(const WrongAnimal &source)
 {
     this->type = source.type;
 }
 // copy assignment operator
-Animal& Animal::operator=(const Animal &source)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal &source)
 {
     if (this != &source)
     {
@@ -34,12 +34,12 @@ Animal& Animal::operator=(const Animal &source)
     }
     return (*this);
 }
-string Animal::getType(void) const
+string WrongAnimal::getType(void) const
 {
     return (type);
 }
 
-void Animal::makeSound(void) const
+void WrongAnimal::makeSound(void) const
 {
-    cout << GREEN << "Animal: *animalSound*" << RESET << endl;
+    cout << GREEN << "WrongAnimal: *WronganimalSound*" << RESET << endl;
 }
