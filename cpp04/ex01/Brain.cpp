@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 10:57:39 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/14 11:47:06 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/24 18:20:04 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Brain& Brain::operator=(const Brain &source)
     int i;
     
     i = 0;
+    cout << MAGENTA << "Brain: Copy Assign called." << RESET << endl;
     if (this != &source)
     {
         while (i < 100)

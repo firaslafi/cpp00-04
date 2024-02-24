@@ -6,7 +6,7 @@
 /*   By: flafi <flafi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 12:27:56 by flafi             #+#    #+#             */
-/*   Updated: 2024/02/14 12:44:15 by flafi            ###   ########.fr       */
+/*   Updated: 2024/02/24 18:33:18 by flafi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,39 @@ int main(void)
     // }
     // cout << basic.getBrainAddress() << endl;
     // ends here
-    Dog* basic = new Dog();
-    cout << basic->getBrainAddress() << endl;
+    
+    // Dog* basic = new Dog();
+    // cout << basic->getBrainAddress() << endl;
+    
     // Cat* basics = new Cat();
     // cout << basics->getBrainAddress() << endl;
     
-    delete basic;
+    Animal *array[20];
+    int i;
+    
+    i = 0;
+    while (i < 20)
+    {
+        if (i < 10)
+            array[i] = new Cat();
+        else
+            array[i] = new Dog();
+        i++;
+    }
+    i = 0;
+    while (i < 20)
+    {
+        array[i]->makeSound();
+        i++;
+    }
+    i = 0;
+    while (i < 20)
+    {
+        delete array[i];
+        i++;
+    }
+    // delete basic;
     // delete basics;
-    system("leaks program");
+    // system("leaks program");
     return (0);
 }
